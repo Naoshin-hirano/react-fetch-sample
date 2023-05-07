@@ -10,5 +10,5 @@ export const Fetch = ({
     const { loading, data, error } = useFetch(uri);
     if (error) return renderError;
     if (loading) return loadingFallback;
-    if (data) return renderSuccess(data);
+    if (data) return renderSuccess({ data });
 };

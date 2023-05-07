@@ -9,9 +9,13 @@ function App() {
     const [login, setLogin] = useState("moontahoe");
     const [repo, setRepo] = useState("learning-react");
 
+    const handleChange = (e: any) => {
+        setLogin(e.target.value);
+    };
+
     return (
         <>
-            <SearchForm value={login} onSearch={setLogin} />
+            <SearchForm value={login} onSearch={handleChange} />
             {login && <GitHubUser login={login} />}
             {login && (
                 <UserRepository
