@@ -1,7 +1,7 @@
 import { useCallback, useMemo, useState } from "react";
 
-export const useIterator = (items = [], initialValue = 0) => {
-    const [i, setIndex] = useState(initialValue);
+export const useIterator = (items = []) => {
+    const [i, setIndex] = useState(0);
 
     const prev = useCallback(() => {
         if (i === 0) return setIndex(items.length - 1);

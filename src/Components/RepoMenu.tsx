@@ -3,8 +3,7 @@ import { useEffect } from "react";
 import { useIterator } from "../Hooks/useIterator";
 
 export const RepoMenu = ({ repository, onSelect, selectedRepo }: any) => {
-    const initialValue = 0;
-    const [{ name }, previous, next] = useIterator(repository, initialValue);
+    const [{ name }, previous, next] = useIterator(repository);
 
     useEffect(() => {
         onSelect(name);
